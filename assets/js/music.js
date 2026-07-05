@@ -150,9 +150,16 @@
     if (audio.currentTime) localStorage.setItem(TIME_KEY, String(audio.currentTime));
   });
 
-  const hashPage = window.location.hash.replace("#", "");
-  const savedPage = localStorage.getItem(PAGE_KEY);
-  const initialPage = hashPage || savedPage || "intro";
+  const initialPage = "intro";
+
+  // Xóa trang đã lưu, để mỗi lần mở link gốc luôn bắt đầu từ intro
+  localStorage.setItem(PAGE_KEY, "intro");
+  
+  // Nếu URL đang bị dính #yes, #story, #choice thì xóa luôn
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+  
   frame.src = pageToFile(initialPage);
   updateControl();
 
