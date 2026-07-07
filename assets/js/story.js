@@ -32,7 +32,7 @@ const storyPages = [
     step: "03",
     tag: "Từ những tin nhắn nhỏ",
     title: "Ngày nào cũng muốn nhắn với em",
-    text: "Từ vài câu hỏi thăm, vài chuyện vụn vặt, rồi dần dần thành thói quen.\nCó những lúc nhắn với em, anh đã mình vui hơn một chút...",
+    text: "Từ vài câu hỏi thăm, vài chuyện vụn vặt, rồi dần dần thành thói quen.\nCó những lúc nhắn với em, anh cảm thấy mình vui hơn một chút...",
     icon: "💬",
     caption: "Những dòng tin nhắn nhỏ dần trở thành điều anh mong chờ",
     bg: "chat"
